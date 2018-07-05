@@ -1,25 +1,36 @@
 //@flow
 
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
+
+//Material UI things
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import grey from '@material-ui/core/colors/grey';
+import deepOrange from '@material-ui/core/colors/deepOrange';
+
+//App wide css
 import './App.css';
 
-type Props = {};
+//components
+import Intro from './components/intro/intro';
+import TopBar from './components/topbar/topbar';
 
-class App extends Component<Props> {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+const theme = createMuiTheme({
+  palette: {
+    primary: grey,
+    secondary: deepOrange,
+    type: 'dark'
   }
+});
+
+function App() {
+  return (
+      <MuiThemeProvider theme={theme}>
+        <CssBaseline />
+        <TopBar />
+        <Intro />
+      </MuiThemeProvider>
+    )
 }
 
 export default App;
