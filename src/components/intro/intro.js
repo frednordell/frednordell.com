@@ -20,9 +20,10 @@ class Intro extends Component<Props, State> {
 					<Typography align='center' variant="display3">Fred Nordell</Typography>
 				</Grid>
 				<Grid item xs={10}>
-					<Typography align='center' variant="caption">Studying <a href="http://www.lth.se/english/education/programmes/master-engineering/computer-science-engineering/" target="_blank" rel="noopener noreferrer">
+					<Typography align='center' variant="body1">Studying <a href="http://www.lth.se/english/education/programmes/master-engineering/computer-science-engineering/" target="_blank" rel="noopener noreferrer">
 						Master of Science in Engineering, Computer Science and Engineering 
-					</a> at <a href="https://www.lu.se/" traget="_blank" rel="noopener noreferrer">Lund Univerisity</a></Typography>
+						</a> at <a href="https://www.lu.se/" traget="_blank" rel="noopener noreferrer">Lund Univerisity</a>
+					</Typography>
 				</Grid>
 				<Grid item xs={12}>
 					<Button variant="outlined" download="CV_Fred_Nordell.pdf" href="CV_Fred_Nordell.pdf"><Icon style={{marginRight: '5px'}}>file_download</Icon> Download CV</Button>
