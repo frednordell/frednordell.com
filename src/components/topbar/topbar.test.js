@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TopBar from './Topbar';
+import TopBar from './topbar';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
