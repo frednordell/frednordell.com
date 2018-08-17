@@ -51,11 +51,15 @@ class TopBar extends React.Component<{classes: {nested: {}}}, State> {
 		})
 	}
 
+	linkToPage = (link: string) => () => {
+
+	}
+
 	render() {
 		const { classes } = this.props;
 		const sideButtons = (
 			<List>
-				<ListItem button onClick={this.toggleExpand('pro', !this.state.pro)}>
+				{/*<ListItem button onClick={this.toggleExpand('pro', !this.state.pro)}>
           		<ListItemIcon>
             		<Icon>business</Icon>
          		 </ListItemIcon>
@@ -71,7 +75,7 @@ class TopBar extends React.Component<{classes: {nested: {}}}, State> {
 	                		<ListItemText inset primary="Starred" />
               			</ListItem>
            			 </List>
-          		</Collapse>
+          		</Collapse>*/}
         		<ListItem button onClick={this.toggleExpand('edu', !this.state.edu)}>
           		<ListItemIcon>
             		<Icon>school</Icon>
@@ -83,9 +87,9 @@ class TopBar extends React.Component<{classes: {nested: {}}}, State> {
             		<List component="div" disablePadding>
               			<ListItem button className={classes.nested}>
 	                		<ListItemIcon>
-	                  			<Icon>home</Icon>
+	                  			<Icon>link</Icon>
 	                		</ListItemIcon>
-	                		<ListItemText inset primary="Starred" />
+	                		<ListItemText inset primary="Course summaries" />
               			</ListItem>
            			 </List>
           		</Collapse>

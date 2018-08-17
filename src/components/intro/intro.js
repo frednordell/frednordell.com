@@ -14,7 +14,7 @@ class Intro extends Component<Props, State> {
 		return (
 			<Grid container direction="column" alignItems="center" justify="center" spacing={24}>
 				<Grid item xs={10} md={3}>
-					<img style={{maxWidth: '100%', borderRadius: '50%'}} src="face.jpg" alt=""/>
+					<img style={{maxWidth: '100%', borderRadius: '20%'}} src="face2.jpg" alt=""/>
 				</Grid>
 				<Grid item xs={10}>
 					<Typography align='center' variant="display3">Fred Nordell</Typography>
