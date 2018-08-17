@@ -1,4 +1,4 @@
-# Personal-webpage
+# Personal-webpage [![Build Status](https://api.travis-ci.org/frednordell/fred.nordells.nu.svg?branch=master)](https://travis-ci.org/frednordell/fred.nordells.nu)
 This is the source code for the webpage that serves as a portfolio, mostly i just wanted to try out react.
 
 ## Project structure
