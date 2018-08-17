@@ -1,17 +1,17 @@
 language: node_js
 node_js:
-  - "stable"
+- stable
 cache:
   directories:
   - node_modules
 script:
-  - npm test
-  - npm run build
+- npm test
+- npm run build
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token:
-    secure: B5tcWHEQtWAJJYSivLfN4X3pyn9z5pCZuisCCyuhPlHDbv2Xn9+m5ALyXolfAoBfMhFtANMVnfZchYPzdgOXYzLJeKJRiWhK18kNprpFsdzSM3ik/eYA6TVnnVTD4iPZNSUlxyp6sjOYOqfRghpfezsE1//KntoqxjpMG1bH0VYWRgixJeXCAQUPEaGOuxD1VvNkNRcjtNAGav+FrAWBRiZiMIV75nLwBlTXM/pecMQbYDgz1u/0+ZkwVqFRaCo3Fk1wPV2hfrXkz7fiiZc1eLPFsgaL4YMrg6KL246FxOEkdAOUfJEYLovMYYzu5E6+6mAfSbFkxsZ4ozbP5jqZGyqByGbJIWwbApLR+++FOR+ijrwgzo7ZiW7RMjRIGDYcqxUTsIqYdSm0eNO51hCCGUoaYuPXzrb4Mj7Ewne2TsVib5UYBSgtgrpfoXX+Sywg1wvx4810JdnvQB91j0xCcGFa6IAJmvj8nf/U6oJz1eJjrS3oZYywDPOTDumVr0msMf3UV8jeofeS/NVIAOZOgkujfYBGG4HvGm01hM0m9koaYhZz+Gnvchw+dCTZIt2iK9wPul4LL2z+erNOxa1zQyybAQW68/tkCn85YJMf+gJyN3ZClPJCAE8EKsc7Ca7JX14idWlNuGNMxJPp6pixmJRNKoCJFVj6j572qpwlpRg=
   local_dir: build
   on:
     branch: master
+  github_token:
+    secure: Gv1GnMGKWjGG6n1U6Mg0J/1bU4C8y1WjcWOnjldpCdOnTzUygGYfEEiLzB3oKEzB8itZ4aU0erntG/VYl2p27/Oqzt8sdWRThiJcZVrtJUCKpBqkA79YdQGtegtmwW7Yi2nzsAyDwTkuvcbIB6XURGBTcP2MGlg2HVkS4sHh7H8rEBLhY0P2wSSpSM8m7kH7GX8gamEKaMO5tLo4Hic40zhS9n4rndvwf5PxaWfwi2QfY0iA472uBeKBGSCNOHB+y4YiBTB0jdHrrLprMuESd7UD++B/jlg8JRuZ8izEXOkhqdgww6zkI4GL+XysJ0j9qTpDd3mkoNAmb0XXglIYE0G8Avwpje14ZEi54d0BN37u+lLiaxtO9nyNK0WQlAEEgLnZENDKI/egANAojhdJ6bf425/Rac4ifVbveU92Eh9d+vR0I/foCIjlOyXlLMt8KoomnnKFJRDvetnyei+L6G7G56pwgMtXrg8wI8OyjLJ2MkgU5jEdrdW3+h+Zt3mQpV1qJEJNXt25FfXh+jmXpQ0DknvChdMG3ewGr0zastEgkdLJaoZ904yE/GS2+VWOEx37YuVLLNjEcExPrVnLi5XWSDTTCj1aNhxVkxABwpKyniFVF2OplvlNDLa8SwHMqqvK1Qawjf1wfcJc8pNC5aige8tKC5xlcbMf+0CdqOc=
