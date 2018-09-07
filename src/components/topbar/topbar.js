@@ -84,10 +84,11 @@ class TopBar extends React.Component<{classes: {nested: {}}}, State> {
          		{this.state.edu ? <IconButton><Icon>expand_less</Icon></IconButton> : <IconButton><Icon>expand_more</Icon></IconButton>}
         		</ListItem>
         		<Collapse in={this.state.edu} timeout="auto" unmountOnExit>
-            		<List component="div" disablePadding>
-              			<ListItem button className={classes.nested}>
+            		<List component="nav" disablePadding>
+              			<ListItem button className={classes.nested} onClick={window.location.href("https://github.com/frednordell/summaries")}>
+              				{/* href="https://github.com/frednordell/summaries" */}
 	                		<ListItemIcon>
-	                  			<Icon>link</Icon>
+	                  			<Icon>paper</Icon>
 	                		</ListItemIcon>
 	                		<ListItemText inset primary="Course summaries" />
               			</ListItem>
@@ -101,12 +102,12 @@ class TopBar extends React.Component<{classes: {nested: {}}}, State> {
          		{this.state.non ? <IconButton><Icon>expand_less</Icon></IconButton> : <IconButton><Icon>expand_more</Icon></IconButton>}
         		</ListItem>
         		<Collapse in={this.state.non} timeout="auto" unmountOnExit>
-            		<List component="div" disablePadding>
-              			<ListItem button className={classes.nested}>
+            		<List component="nav" disablePadding>
+              			<ListItem button className={classes.nested} href="https://github.com/Dsek-LTH" target="_blank">
 	                		<ListItemIcon>
-	                  			<Icon>home</Icon>
+	                  			<Icon>code</Icon>
 	                		</ListItemIcon>
-	                		<ListItemText inset primary="Starred" />
+	                		<ListItemText inset primary="D-sek LTH" />
               			</ListItem>
            			 </List>
           		</Collapse>
@@ -118,12 +119,12 @@ class TopBar extends React.Component<{classes: {nested: {}}}, State> {
          		{this.state.foss ? <IconButton><Icon>expand_less</Icon></IconButton> : <IconButton><Icon>expand_more</Icon></IconButton>}
         		</ListItem>
         		<Collapse in={this.state.foss} timeout="auto" unmountOnExit>
-            		<List component="div" disablePadding>
-              			<ListItem button className={classes.nested}>
+            		<List component="nav" disablePadding>
+              			<ListItem button className={classes.nested} href="https://github.com/frednordell/fred.nordells.nu" target="_blank">
 	                		<ListItemIcon>
-	                  			<Icon>home</Icon>
+	                  			<Icon>code</Icon>
 	                		</ListItemIcon>
-	                		<ListItemText inset primary="Starred" />
+	                		<ListItemText inset primary="fred.nordells.nu" />
               			</ListItem>
            			 </List>
           		</Collapse>
