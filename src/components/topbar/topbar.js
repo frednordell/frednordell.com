@@ -59,23 +59,6 @@ class TopBar extends React.Component<{classes: {nested: {}}}, State> {
 		const { classes } = this.props;
 		const sideButtons = (
 			<List>
-				{/*<ListItem button onClick={this.toggleExpand('pro', !this.state.pro)}>
-          		<ListItemIcon>
-            		<Icon>business</Icon>
-         		 </ListItemIcon>
-         		<ListItemText primary="Professional" />
-         		{this.state.pro ? <IconButton><Icon>expand_less</Icon></IconButton> : <IconButton><Icon>expand_more</Icon></IconButton>}
-        		</ListItem>
-        		<Collapse in={this.state.pro} timeout="auto" unmountOnExit>
-            		<List component="div" disablePadding>
-              			<ListItem button className={classes.nested}>
-	                		<ListItemIcon>
-	                  			<Icon>home</Icon>
-	                		</ListItemIcon>
-	                		<ListItemText inset primary="Starred" />
-              			</ListItem>
-           			 </List>
-          		</Collapse>*/}
         		<ListItem button onClick={this.toggleExpand('edu', !this.state.edu)}>
           		<ListItemIcon>
             		<Icon>school</Icon>
@@ -85,10 +68,9 @@ class TopBar extends React.Component<{classes: {nested: {}}}, State> {
         		</ListItem>
         		<Collapse in={this.state.edu} timeout="auto" unmountOnExit>
             		<List component="nav" disablePadding>
-              			<ListItem button className={classes.nested} onClick={window.location.href("https://github.com/frednordell/summaries")}>
-              				{/* href="https://github.com/frednordell/summaries" */}
+              			<ListItem button className={classes.nested} component="a" target="_blank" href="https://github.com/frednordell/summaries">
 	                		<ListItemIcon>
-	                  			<Icon>paper</Icon>
+	                  			<Icon>link</Icon>
 	                		</ListItemIcon>
 	                		<ListItemText inset primary="Course summaries" />
               			</ListItem>
@@ -103,9 +85,9 @@ class TopBar extends React.Component<{classes: {nested: {}}}, State> {
         		</ListItem>
         		<Collapse in={this.state.non} timeout="auto" unmountOnExit>
             		<List component="nav" disablePadding>
-              			<ListItem button className={classes.nested} href="https://github.com/Dsek-LTH" target="_blank">
+              			<ListItem button className={classes.nested} component="a" href="https://github.com/Dsek-LTH" target="_blank">
 	                		<ListItemIcon>
-	                  			<Icon>code</Icon>
+	                  			<Icon>link</Icon>
 	                		</ListItemIcon>
 	                		<ListItemText inset primary="D-sek LTH" />
               			</ListItem>
@@ -120,11 +102,17 @@ class TopBar extends React.Component<{classes: {nested: {}}}, State> {
         		</ListItem>
         		<Collapse in={this.state.foss} timeout="auto" unmountOnExit>
             		<List component="nav" disablePadding>
-              			<ListItem button className={classes.nested} href="https://github.com/frednordell/fred.nordells.nu" target="_blank">
+              			<ListItem button className={classes.nested} component="a" href="https://github.com/frednordell/fred.nordells.nu" target="_blank">
 	                		<ListItemIcon>
-	                  			<Icon>code</Icon>
+	                  			<Icon>link</Icon>
 	                		</ListItemIcon>
 	                		<ListItemText inset primary="fred.nordells.nu" />
+              			</ListItem>
+              			<ListItem button className={classes.nested} component="a" href="https://github.com/frednordell/skaggkollen" target="_blank">
+	                		<ListItemIcon>
+	                  			<Icon>link</Icon>
+	                		</ListItemIcon>
+	                		<ListItemText inset primary="skäggkollen.nu" />
               			</ListItem>
            			 </List>
           		</Collapse>
