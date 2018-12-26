@@ -1,6 +1,6 @@
 {
   "name": "personal-webpage",
-  "homepage": "https://frednordell.github.com/fred.nordells.nu",
+  "homepage": "http://fred.nordells.nu",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
