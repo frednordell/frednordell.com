@@ -9,6 +9,7 @@ script:
 - npm run build
 deploy:
   provider: pages
+  fqdn: fred.nordells.nu
   skip_cleanup: true
   local_dir: build
   on:
