@@ -1,24 +1,31 @@
 {
   "name": "personal-webpage",
   "homepage": "http://fred.nordells.nu",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^1.2.1",
+    "@material-ui/core": "^4.9.14",
+    "@zeit/next-css": "^1.0.1",
+    "clsx": "^1.1.0",
+    "next": "^9.4.0",
+    "prop-types": "^15.7.2",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
-    "react-scripts": "^3.0.1",
-    "url-parse": "^1.4.3"
+    "react-scripts": "^3.4.1",
+    "url-parse": "^1.4.7"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "dev": "next",
+    "start": "next start",
+    "build": "next build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "flow": "flow"
   },
   "devDependencies": {
-    "flow-bin": "^0.74.0"
+    "gray-matter": "^4.0.2",
+    "react-markdown": "^4.3.1",
+    "typescript": "^3.9.2"
   },
   "resolutions": {
     "jest": "^24.3.0"

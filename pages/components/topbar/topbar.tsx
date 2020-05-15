@@ -1,5 +1,3 @@
-//@flow
-
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -17,11 +15,11 @@ import Grid from "@material-ui/core/Grid";
 import Collapse from "@material-ui/core/Collapse";
 
 type State = {
-  left: boolean,
-  pro: boolean,
-  edu: boolean,
-  non: boolean,
-  foss: boolean,
+  left: boolean;
+  pro: boolean;
+  edu: boolean;
+  non: boolean;
+  foss: boolean;
 };
 
 const styles = (theme) => ({
@@ -76,7 +74,7 @@ class TopBar extends React.Component<{ classes: { nested: {} } }, State> {
           <List component="nav" disablePadding>
             <ListItem
               button
-              className={classes.nested}
+              class-name={classes.nested}
               component="a"
               target="_blank"
               href="https://github.com/frednordell/summaries"
@@ -107,7 +105,7 @@ class TopBar extends React.Component<{ classes: { nested: {} } }, State> {
           <List component="nav" disablePadding>
             <ListItem
               button
-              className={classes.nested}
+              class-name={classes.nested}
               component="a"
               href="https://github.com/Dsek-LTH"
               target="_blank"
@@ -138,7 +136,7 @@ class TopBar extends React.Component<{ classes: { nested: {} } }, State> {
           <List component="nav" disablePadding>
             <ListItem
               button
-              className={classes.nested}
+              class-name={classes.nested}
               component="a"
               href="https://github.com/frednordell/fred.nordells.nu"
               target="_blank"
@@ -150,7 +148,7 @@ class TopBar extends React.Component<{ classes: { nested: {} } }, State> {
             </ListItem>
             <ListItem
               button
-              className={classes.nested}
+              class-name={classes.nested}
               component="a"
               href="https://github.com/frednordell/skaggkollen"
               target="_blank"
@@ -164,7 +162,7 @@ class TopBar extends React.Component<{ classes: { nested: {} } }, State> {
         </Collapse>
       </List>
     );
-    return (
+    const component = (
       <div>
         <AppBar
           position="static"
@@ -207,7 +205,8 @@ class TopBar extends React.Component<{ classes: { nested: {} } }, State> {
           open={this.state.left}
           onClose={this.toggleDrawer(false)}
           ModalProps={{
-            keepMounted: true /* Better open performance on mobile.*/,
+            keepMounted: true,
+            /* Better open performance on mobile.*/
           }}
         >
           <div onKeyDown={this.toggleDrawer(false)}>
@@ -234,6 +233,7 @@ class TopBar extends React.Component<{ classes: { nested: {} } }, State> {
         </Drawer>
       </div>
     );
+    return component;
   }
 }
 

@@ -1,5 +1,3 @@
-// @flow
-
 import React, { Component } from "react";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
@@ -44,7 +42,7 @@ class Intro extends Component<Props, State> {
             at{" "}
             <a
               href="https://www.lu.se/"
-              traget="_blank"
+              target="_blank"
               rel="noopener noreferrer"
             >
               Lund Univerisity
