@@ -15,7 +15,7 @@ class Intro extends Component<Props, State> {
         direction="column"
         alignItems="center"
         justify="center"
-        spacing={24}
+        spacing={1}
       >
         <Grid item xs={10} md={3}>
           <img
@@ -25,7 +25,7 @@ class Intro extends Component<Props, State> {
           />
         </Grid>
         <Grid item xs={10}>
-          <Typography align="center" variant="display3">
+          <Typography align="center" variant="h3">
             Fred Nordell
           </Typography>
         </Grid>

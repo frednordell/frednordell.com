@@ -8,7 +8,7 @@ import { MuiThemeProvider } from "@material-ui/core/styles";
 import theme from "../src/theme";
 
 //App wide css
-import "./App.css";
+import "../styles/App.css";
 
 export default function App(props) {
   const { Component, pageProps } = props;
@@ -23,6 +23,9 @@ export default function App(props) {
 
   return (
     <React.Fragment>
+      <Head>
+        <title>Fred Nordell</title>
+      </Head>
       <MuiThemeProvider theme={theme}>
         <CssBaseline />
         <Component {...pageProps} />

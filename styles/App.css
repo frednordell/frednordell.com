@@ -1,0 +1,11 @@
+a {
+  color: inherit;
+}
+
+#root {
+  overflow-x: hidden;
+}
+
+#copyright {
+  margin-top: 1em;
+}

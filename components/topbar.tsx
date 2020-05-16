@@ -24,7 +24,7 @@ type State = {
 
 const styles = (theme) => ({
   nested: {
-    paddingLeft: theme.spacing.unit * 4,
+    paddingLeft: theme.spacing(3),
   },
 });
 
@@ -74,7 +74,7 @@ class TopBar extends React.Component<{ classes: { nested: {} } }, State> {
           <List component="nav" disablePadding>
             <ListItem
               button
-              class-name={classes.nested}
+              className={classes.nested}
               component="a"
               target="_blank"
               href="https://github.com/frednordell/summaries"
@@ -82,7 +82,7 @@ class TopBar extends React.Component<{ classes: { nested: {} } }, State> {
               <ListItemIcon>
                 <Icon>link</Icon>
               </ListItemIcon>
-              <ListItemText inset primary="Course summaries" />
+              <ListItemText primary="Course summaries" />
             </ListItem>
           </List>
         </Collapse>
@@ -105,7 +105,7 @@ class TopBar extends React.Component<{ classes: { nested: {} } }, State> {
           <List component="nav" disablePadding>
             <ListItem
               button
-              class-name={classes.nested}
+              className={classes.nested}
               component="a"
               href="https://github.com/Dsek-LTH"
               target="_blank"
@@ -113,7 +113,7 @@ class TopBar extends React.Component<{ classes: { nested: {} } }, State> {
               <ListItemIcon>
                 <Icon>link</Icon>
               </ListItemIcon>
-              <ListItemText inset primary="D-sek LTH" />
+              <ListItemText primary="D-sek LTH" />
             </ListItem>
           </List>
         </Collapse>
@@ -136,7 +136,7 @@ class TopBar extends React.Component<{ classes: { nested: {} } }, State> {
           <List component="nav" disablePadding>
             <ListItem
               button
-              class-name={classes.nested}
+              className={classes.nested}
               component="a"
               href="https://github.com/frednordell/fred.nordells.nu"
               target="_blank"
@@ -144,20 +144,20 @@ class TopBar extends React.Component<{ classes: { nested: {} } }, State> {
               <ListItemIcon>
                 <Icon>link</Icon>
               </ListItemIcon>
-              <ListItemText inset primary="fred.nordells.nu" />
+              <ListItemText primary="fred.nordells.nu" />
             </ListItem>
-            <ListItem
+            {/* <ListItem
               button
-              class-name={classes.nested}
+              className={classes.nested}
               component="a"
               href="https://github.com/frednordell/skaggkollen"
               target="_blank"
             >
+              <ListItemText inset primary="skäggkollen.nu" />
               <ListItemIcon>
                 <Icon>link</Icon>
               </ListItemIcon>
-              <ListItemText inset primary="skäggkollen.nu" />
-            </ListItem>
+            </ListItem> */}
           </List>
         </Collapse>
       </List>
@@ -217,7 +217,7 @@ class TopBar extends React.Component<{ classes: { nested: {} } }, State> {
               justify="space-between"
             >
               <Typography
-                variant="title"
+                variant="h6"
                 align="center"
                 style={{ marginLeft: "18px" }}
               >

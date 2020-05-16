@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import registerServiceWorker from "./registerServiceWorker";
+import registerServiceWorker from "../utils/registerServiceWorker";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheets } from "@material-ui/core/styles";
 import theme from "../src/theme";
@@ -9,7 +9,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <meta charset="utf-8" />
+          <meta charSet="utf-8" />
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -23,9 +23,8 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
           />
-          <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-          <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
-          <title>Fred Nordell</title>
+          <link rel="manifest" href="manifest.json" />
+          <link rel="shortcut icon" href="favicon.ico" />
         </Head>
         <body>
           <Main />
@@ -55,12 +54,3 @@ MyDocument.getInitialProps = async (ctx) => {
     ],
   };
 };
-
-/* const root = document.getElementById("root");
-if (root) {
-  ReactDOM.render(<App />, root);
-  registerServiceWorker();
-} else {
-  console.error("Couldn't find root node");
-}
- */
