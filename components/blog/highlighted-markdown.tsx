@@ -55,14 +55,7 @@ const options = {
     },
     p: {
       component: (props) => {
-        return props.children.some(
-          (child: JSX.Element) =>
-            (child.type && child.type === Grid) || Image || Box
-        ) ? (
-          <Fragment>{props.children}</Fragment>
-        ) : (
-          <Typography align="justify" paragraph {...props} />
-        );
+        return <Typography component="div" align="left" paragraph {...props} />;
       },
     },
     a: { component: Link },
