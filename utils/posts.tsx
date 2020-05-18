@@ -59,7 +59,9 @@ export function getPostBySlug(slug) {
     .readFileSync(path.join("content/posts", slug + ".md"))
     .toString();
 
-  const { data, content, excerpt } = matter(markdownWithMetadata);
+  const { data, content, excerpt } = matter(markdownWithMetadata, {
+    excerpt: true,
+  });
 
   const frontmatter = {
     ...data,

@@ -5,11 +5,41 @@ postedAt: 2020-05-14
 updatedAt:
 ---
 
-# h1
+# Whats is this about? 
 
-## h2
+![vertical](vertical.jpg)
 
-### h3
+Cupidatat incididunt voluptate ut nisi velit amet incididunt magna nisi exercitation adipisicing amet incididunt. Dolor occaecat non est velit officia officia laborum cillum et. Elit fugiat sit cillum excepteur in tempor irure id. Aliqua qui consequat cillum commodo adipisicing sit commodo aute mollit occaecat aute ullamco aliqua consequat. Aliquip sit aliquip in consequat laborum et cupidatat velit sunt id laborum esse dolor. Et reprehenderit mollit duis in quis elit ad id nulla quis.
+
+![horizontal](horizontal.jpg)
+
+[links](/)
+
+```java
+var some = code();
+var some = code();
+var some = code();
+var some = code();
+var some = code();
+```
+
+## A sub-heading
+Sunt adipisicing do officia sit commodo reprehenderit. Pariatur fugiat labore velit aliqua nulla non. Reprehenderit anim anim culpa dolor. Eiusmod occaecat ullamco et Lorem cupidatat officia labore. Eu reprehenderit mollit Lorem cupidatat enim quis aliqua velit nisi sunt aliquip aliqua.
+
+
+Bullet point:
+
+ * one
+    * two
+
+
+List: 
+
+1. 40% luck
+2. 50% skill
+
+
+### Thirtd point
 
 Dolore id non incididunt id sint tempor aliqua proident mollit qui aliqua. Duis aute eiusmod cupidatat sunt enim id. Qui magna ullamco esse fugiat elit commodo tempor ut aute do. Velit aliqua adipisicing labore aliqua nisi consequat. Cillum id mollit excepteur proident in eu cillum. Mollit eiusmod fugiat excepteur ea esse do sit aliqua nisi.
 

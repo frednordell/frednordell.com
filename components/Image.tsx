@@ -6,7 +6,7 @@ export default function Image({ alt, src, previewSrc, className }) {
       className={`lazyload blur-up ${className}`}
       alt={alt}
       src={previewSrc}
-      data-srcSet={src}
+      data-srcset={src}
     />
   );
 }

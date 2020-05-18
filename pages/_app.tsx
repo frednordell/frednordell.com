@@ -9,6 +9,7 @@ import theme from "../src/theme";
 
 //App wide css
 import "../styles/App.css";
+import "highlight.js/styles/gruvbox-dark.css";
 
 export default function App(props) {
   const { Component, pageProps } = props;

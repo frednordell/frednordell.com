@@ -3,11 +3,13 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import Icon from "@material-ui/core/Icon";
+import Image from "./Image";
 
 type Props = {};
 type State = {};
 
 class Intro extends Component<Props, State> {
+  src = "face2.jpg";
   render() {
     return (
       <Grid
@@ -18,10 +20,11 @@ class Intro extends Component<Props, State> {
         spacing={1}
       >
         <Grid item xs={10} md={3}>
-          <img
-            style={{ maxWidth: "100%", borderRadius: "20%" }}
-            src="face2.jpg"
-            alt=""
+          <Image
+            src={require(`../content/assets/${this.src}`)}
+            previewSrc={require(`../content/assets/${this.src}?lqip`)}
+            alt="Image of Fred"
+            className="intro-image"
           />
         </Grid>
         <Grid item xs={10}>

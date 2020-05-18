@@ -7,6 +7,7 @@ import {
   CardContent,
   CardActions,
   Button,
+  Grid,
 } from "@material-ui/core";
 import Link from "../../src/Link";
 
@@ -25,28 +26,28 @@ class BlogCard extends Component<Props> {
     const { classes } = this.props;
     return (
       <Card component="article">
-        <CardActionArea>
-          <CardContent>
-            <header>
-              <Typography gutterBottom variant="h5" component="h2">
-                {this.props.title}
-              </Typography>
-              <Typography align="left" variant="caption">
-                {this.props.postedAt}
-              </Typography>
-            </header>
-            <Typography variant="body2" color="textSecondary" component="p">
-              {this.props.description}
+        <CardContent>
+          <header>
+            <Typography align="left" variant="caption">
+              {this.props.postedAt}
             </Typography>
-          </CardContent>
-        </CardActionArea>
+            <Typography gutterBottom variant="h5" component="h2">
+              {this.props.title}
+            </Typography>
+          </header>
+          <Typography variant="body2" color="textSecondary" component="p">
+            {this.props.description}
+          </Typography>
+        </CardContent>
         <CardActions>
           <Button size="small" color="primary">
             Share
           </Button>
-          <Button size="small" color="primary">
-            Learn More
-          </Button>
+          <Link href={"/post/[slug]"} as={`/post/${this.props.slug}`}>
+            <Button size="small" color="primary">
+              Read more
+            </Button>
+          </Link>
         </CardActions>
       </Card>
     );

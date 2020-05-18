@@ -42,7 +42,7 @@ class TopBar extends Component {
               rel="noopener noreferrer"
             >
               <img
-                src="GitHub-Mark-Light-64px.png"
+                src="/GitHub-Mark-Light-64px.png"
                 height="24"
                 alt="Github logo"
               />
@@ -52,7 +52,7 @@ class TopBar extends Component {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="In-White-66px-R.png" height="24" alt="Linkedin logo" />
+              <img src="/In-White-66px-R.png" height="24" alt="Linkedin logo" />
             </IconButton>
             <IconButton
               href="mailto:fred@nordells.nu"

@@ -9,3 +9,13 @@ a {
 #copyright {
   margin-top: 1em;
 }
+
+.markdown-image {
+  max-width: 100%;
+  max-height: 50vh;
+}
+
+.intro-image {
+  max-width: 100%;
+  border-radius: 20%;
+}
