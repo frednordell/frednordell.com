@@ -9,7 +9,7 @@
     "clsx": "^1.1.0",
     "highlight.js": "^10.0.3",
     "image-webpack-loader": "^4.5.0",
-    "imagemin-mozjpeg": "^6.0.0",
+    "imagemin-mozjpeg": "^8.0.0",
     "imagemin-optipng": "^7.1.0",
     "lazysizes": "^5.2.1-rc1",
     "lqip-loader": "^2.2.0",
