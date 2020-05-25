@@ -31,7 +31,10 @@ class TopBar extends Component {
           style={{ marginBottom: "24px" }}
         >
           <Toolbar>
-            <IconButton onClick={this.toggleDrawer(true)}>
+            <IconButton
+              aria-label="Open side menu"
+              onClick={this.toggleDrawer(true)}
+            >
               <Icon>menu</Icon>
             </IconButton>
             <span style={{ flex: 1 }}></span>
@@ -57,6 +60,7 @@ class TopBar extends Component {
               href="mailto:fred@nordells.nu"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Send e-mail"
             >
               <Icon>mail</Icon>
             </IconButton>

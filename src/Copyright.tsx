@@ -10,9 +10,9 @@ export default function Copyright() {
       color="textSecondary"
       align="center"
     >
-      This work is licensed under a{" "}
+      This work is licensed under the <br />
       <a
-        rel="license"
+        rel="noreferrer noopener license"
         target="_blank"
         href="http://creativecommons.org/licenses/by-nc-nd/4.0/"
       >
@@ -21,7 +21,7 @@ export default function Copyright() {
       </a>
       <br />
       <a
-        rel="license"
+        rel="noreferrer noopener license"
         target="_blank"
         href="http://creativecommons.org/licenses/by-nc-nd/4.0/"
       >
