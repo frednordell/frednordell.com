@@ -1,7 +1,7 @@
 {
   "name": "personal-webpage",
   "homepage": "http://fred.nordells.nu",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.9.14",
