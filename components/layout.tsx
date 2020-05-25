@@ -1,17 +1,26 @@
 //components
 import TopBar from "../components/topbar";
 import Copyright from "../src/Copyright";
+import { Grid } from "@material-ui/core";
 
 export default function Layout({ children }) {
   return (
-    <div id="root">
-      <main>
+    <Grid
+      container
+      direction="column"
+      justify="space-between"
+      alignItems="stretch"
+      id="root"
+    >
+      <Grid item component="header">
         <TopBar />
+      </Grid>
+      <Grid item xs component="main">
         {children}
-      </main>
-      <footer>
+      </Grid>
+      <Grid item component="footer">
         <Copyright />
-      </footer>
-    </div>
+      </Grid>
+    </Grid>
   );
 }

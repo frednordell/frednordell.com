@@ -69,10 +69,14 @@ Link.propTypes = {
   href: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   innerRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
   naked: PropTypes.bool,
+  size: PropTypes.string,
   onClick: PropTypes.func,
   prefetch: PropTypes.bool,
+  children: PropTypes.node,
 };
 
-export default React.forwardRef((props, ref) => (
+type LinkProps = React.HTMLProps<HTMLElement>;
+
+export default React.forwardRef<{}, LinkProps>((props, ref) => (
   <Link {...props} innerRef={ref} />
 ));

@@ -30,7 +30,6 @@ class TopBar extends Component {
           color="default"
           style={{ marginBottom: "24px" }}
         >
-          <SideDrawer left={this.state.left} toggleDrawer={this.toggleDrawer} />
           <Toolbar>
             <IconButton onClick={this.toggleDrawer(true)}>
               <Icon>menu</Icon>
@@ -63,6 +62,7 @@ class TopBar extends Component {
             </IconButton>
           </Toolbar>
         </AppBar>
+        <SideDrawer left={this.state.left} toggleDrawer={this.toggleDrawer} />
       </div>
     );
     return component;

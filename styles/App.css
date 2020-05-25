@@ -4,10 +4,15 @@ a {
 
 #root {
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 #copyright {
   margin-top: 1em;
+}
+
+.side-button-list-nested {
+  padding-left: 24px !important;
 }
 
 .markdown-image {

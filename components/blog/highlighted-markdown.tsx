@@ -60,11 +60,13 @@ const options = {
     },
     a: { component: Link },
     li: {
-      component: withStyles(styles)(({ classes, ...props }) => (
-        <li className={classes.listItem}>
-          <Typography component="span" {...props} />
-        </li>
-      )),
+      component: (props) => {
+        return (
+          <li>
+            <Typography component="span" {...props} />
+          </li>
+        );
+      },
     },
   },
 };
@@ -79,8 +81,10 @@ export default function HighlightedMarkdown({
     });
   }, [children]);
   return (
-    <Box paddingTop={1} ref={rootRef}>
-      <Markdown options={options}>{children}</Markdown>
-    </Box>
+    <div ref={rootRef}>
+      <Box paddingTop={1}>
+        <Markdown options={options}>{children}</Markdown>
+      </Box>
+    </div>
   );
 }

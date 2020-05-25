@@ -32,7 +32,7 @@ class Intro extends Component<Props, State> {
             Fred Nordell
           </Typography>
         </Grid>
-        <Grid item xs={10}>
+        <Grid item xs={10} md={6} lg={3}>
           <Typography align="center" variant="body1">
             Studying{" "}
             <a

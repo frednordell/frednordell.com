@@ -7,7 +7,6 @@ import {
   CardContent,
   CardActions,
   Button,
-  Grid,
 } from "@material-ui/core";
 import Link from "../../src/Link";
 
@@ -40,13 +39,17 @@ class BlogCard extends Component<Props> {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small" color="primary">
+          {/*  <Button size="small" color="primary">
             Share
-          </Button>
-          <Link href={"/post/[slug]"} as={`/post/${this.props.slug}`}>
-            <Button size="small" color="primary">
-              Read more
-            </Button>
+          </Button> */}
+          <Link
+            //size="small"
+            color="primary"
+            href={"/post/[slug]"}
+            as={`/post/${this.props.slug}`}
+          >
+            Read more
+            {/* <Button size="small" color="primary"></Button> */}
           </Link>
         </CardActions>
       </Card>
