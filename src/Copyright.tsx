@@ -14,6 +14,7 @@ export default function Copyright() {
         This work is licensed under a{" "}
         <a
           rel="license"
+          target="_blank"
           href="http://creativecommons.org/licenses/by-nc-nd/4.0/"
         >
           Creative Commons Attribution-NonCommercial-NoDerivatives 4.0
@@ -22,6 +23,7 @@ export default function Copyright() {
         <br />
         <a
           rel="license"
+          target="_blank"
           href="http://creativecommons.org/licenses/by-nc-nd/4.0/"
         >
           <img
