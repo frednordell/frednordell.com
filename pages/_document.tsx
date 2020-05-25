@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import registerServiceWorker from "../utils/registerServiceWorker";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheets } from "@material-ui/core/styles";
 import theme from "../src/theme";

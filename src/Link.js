@@ -21,6 +21,7 @@ NextComposed.propTypes = {
   href: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   prefetch: PropTypes.bool,
 };
+
 // A styled version of the Next.js Link component:
 // https://nextjs.org/docs/#with-link
 function Link(props) {
@@ -68,12 +69,15 @@ Link.propTypes = {
   href: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   innerRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
   naked: PropTypes.bool,
-  size: PropTypes.string,
   onClick: PropTypes.func,
   prefetch: PropTypes.bool,
-  children: PropTypes.node,
+  children: PropTypes.any,
+  color: PropTypes.any,
 };
 
-export default React.forwardRef((props, ref) => (
+export default Link;
+
+/* export default React.forwardRef((props, ref) => (
   <Link {...props} innerRef={ref} />
 ));
+ */

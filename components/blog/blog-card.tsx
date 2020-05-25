@@ -43,13 +43,11 @@ class BlogCard extends Component<Props> {
             Share
           </Button> */}
           <Link
-            //size="small"
             color="primary"
             href={"/post/[slug]"}
             as={`/post/${this.props.slug}`}
           >
             Read more
-            {/* <Button size="small" color="primary"></Button> */}
           </Link>
         </CardActions>
       </Card>
