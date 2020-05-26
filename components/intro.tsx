@@ -9,7 +9,7 @@ type Props = {};
 type State = {};
 
 class Intro extends Component<Props, State> {
-  src = "face2.jpg";
+  src = "face2.png";
   render() {
     return (
       <Grid
