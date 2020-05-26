@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.9.14",
+    "babel-plugin-styled-components": "^1.10.7",
     "clsx": "^1.1.0",
     "highlight.js": "^10.0.3",
     "image-webpack-loader": "^4.5.0",

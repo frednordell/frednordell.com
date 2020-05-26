@@ -54,6 +54,7 @@ class Intro extends Component<Props, State> {
         </Grid>
         <Grid item xs={12}>
           <Button
+            size="large"
             variant="outlined"
             download="CV_Fred_Nordell.pdf"
             href="CV_Fred_Nordell.pdf"
