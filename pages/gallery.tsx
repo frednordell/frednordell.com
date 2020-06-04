@@ -92,8 +92,8 @@ const Gallery = (props) => {
               cols={tile.cols || 1}
             >
               <Image
-                src={require(`../content/assets/gallery/${tile.src}`)}
-                previewSrc={require(`../content/assets/gallery/${tile.src}?lqip`)}
+                src={require(`../public/static/gallery/${tile.src}`)}
+                previewSrc={require(`../public/static/gallery/${tile.src}?lqip`)}
                 alt={tile.title}
                 className={classes.gridListImage}
               />

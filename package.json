@@ -13,7 +13,7 @@
     "imagemin-optipng": "^7.1.0",
     "lazysizes": "^5.2.1-rc1",
     "lqip-loader": "^2.2.0",
-    "markdown-to-jsx": "^6.11.1",
+    "markdown-to-jsx": "^6.11.4",
     "next": "^9.4.0",
     "next-compose-plugins": "^2.2.0",
     "next-optimized-images": "^2.6.0",
@@ -23,7 +23,8 @@
     "react-scripts": "^3.4.1",
     "react-syntax-highlighter": "^12.2.1",
     "refractor": "^3.0.0",
-    "url-parse": "^1.4.7"
+    "url-parse": "^1.4.7",
+    "webpackbar": "^4.0.0"
   },
   "scripts": {
     "dev": "next",
@@ -35,6 +36,7 @@
   "devDependencies": {
     "gray-matter": "^4.0.2",
     "react-markdown": "^4.3.1",
+    "speed-measure-webpack-plugin": "^1.3.3",
     "typescript": "^3.9.2"
   },
   "resolutions": {
