@@ -49,8 +49,8 @@ module.exports = withPlugins(
         loaders: [{ loader: "lqip-loader" }],
       });
 
-      //return config;
-      return smp.wrap(config);
+      return config;
+      // return smp.wrap(config);
     },
   }
 );
