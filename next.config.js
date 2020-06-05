@@ -7,37 +7,30 @@ const WebpackBar = require("webpackbar");
 const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
 const smp = new SpeedMeasurePlugin();
 
-module.exports = withPlugins(
-  [
-    optimizedImages,
-    {
-      handleImages: ["jpeg", "png"],
-    },
-  ],
-  {
-    webpack(config) {
-      //Absolute imports paths
-      const ROOT_DIR = process.cwd();
+module.exports = withPlugins([optimizedImages], {
+  webpack(config) {
+    //Absolute imports paths
+    const ROOT_DIR = process.cwd();
 
-      const directories = fs
-        .readdirSync(ROOT_DIR, { withFileTypes: true })
-        // Disregard hidden folders
-        .filter((file) => file.isDirectory() && file.name[0] !== ".")
-        .map((file) => file.name);
+    const directories = fs
+      .readdirSync(ROOT_DIR, { withFileTypes: true })
+      // Disregard hidden folders
+      .filter((file) => file.isDirectory() && file.name[0] !== ".")
+      .map((file) => file.name);
 
-      directories.forEach((directory) => {
-        config.resolve.alias[directory] = path.join(__dirname, directory);
-      });
+    directories.forEach((directory) => {
+      config.resolve.alias[directory] = path.join(__dirname, directory);
+    });
 
-      config.plugins.push(
-        new WebpackBar({
-          fancy: true,
-          profile: true,
-          basic: false,
-        })
-      );
+    config.plugins.push(
+      new WebpackBar({
+        fancy: true,
+        profile: true,
+        basic: false,
+      })
+    );
 
-      config.module.rules.push({
+    /*config.module.rules.push({
         test: /\.(pdf|md|ico)$/,
         loaders: [
           {
@@ -45,12 +38,26 @@ module.exports = withPlugins(
             options: {},
           },
         ],
-        test: /\.(png|jpe?g)$/,
-        loaders: [{ loader: "lqip-loader" }],
       });
+      
+    config.module.rules.push({
+      test: /\.(png|jpe?g)$/,
+      loaders: [
+        {
+          loader: "webp-loader",
+          options: {
+            fallback: "file-laoder",
+            name: "[name].[ext]",
+            base64: true,
+            palette: true,
+            publicPath: "/_next/static/images",
+            outputPath: "static/images",
+          },
+        },
+      ],
+    });*/
 
-      return config;
-      // return smp.wrap(config);
-    },
-  }
-);
+    return config;
+    //return smp.wrap(config);
+  },
+});

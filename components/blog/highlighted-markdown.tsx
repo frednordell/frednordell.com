@@ -9,14 +9,16 @@ interface HighlightedMarkdownProps {
   children: string;
 }
 
-const MarkdownImage = ({ alt, src }) => (
-  <Image
-    alt={alt}
-    src={require(`public/static/blog/assets/${src}`)}
-    previewSrc={require(`public/static/blog/assets/${src}?lqip`)}
-    className="markdown-image"
-  />
-);
+const MarkdownImage = ({ alt, src }) => {
+  return (
+    <Image
+      alt={alt}
+      path={`content/blog/assets/${src}`}
+      //previewSrc={require(`content/blog/assets/${src}?trace`).trace}
+      className="markdown-image"
+    />
+  );
+};
 
 const MarkdownImageContainer = (props) => (
   <Box marginY={2}>

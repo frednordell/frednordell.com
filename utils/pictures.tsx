@@ -1,7 +1,7 @@
 import fs from "fs";
 
 export default function getPicturesWithColValue() {
-  const files = fs.readdirSync(`${process.cwd()}/public/static/gallery`);
+  const files = fs.readdirSync(`${process.cwd()}/content/gallery`);
 
   const pictures = files.map((filename) => {
     return {

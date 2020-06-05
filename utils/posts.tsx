@@ -11,12 +11,12 @@ function getFormattedDate(date) {
 }
 
 export function getSortedPosts() {
-  const files = fs.readdirSync(`${process.cwd()}/public/static/blog/posts`);
+  const files = fs.readdirSync(`${process.cwd()}/content/blog/posts`);
 
   const posts = files
     .map((filename) => {
       const markdownWithMetadata = fs
-        .readFileSync(`public/static/blog/posts/${filename}`)
+        .readFileSync(`content/blog/posts/${filename}`)
         .toString();
 
       const { data } = matter(markdownWithMetadata);
@@ -43,7 +43,7 @@ export function getSortedPosts() {
 }
 
 export function getPostsSlugs() {
-  const files = fs.readdirSync(`${process.cwd()}/public/static/blog/posts`);
+  const files = fs.readdirSync(`${process.cwd()}/content/blog/posts`);
 
   const paths = files.map((filename) => ({
     params: {
@@ -56,7 +56,7 @@ export function getPostsSlugs() {
 
 export function getPostBySlug(slug) {
   const markdownWithMetadata = fs
-    .readFileSync(path.join("public/static/blog/posts", slug + ".md"))
+    .readFileSync(path.join("content/blog/posts", slug + ".md"))
     .toString();
 
   const { data, content, excerpt } = matter(markdownWithMetadata, {
