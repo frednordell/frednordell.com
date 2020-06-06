@@ -1,4 +1,4 @@
-import Layout from "../components/layout";
+import Layout from "components/layout";
 import SEO from "../components/Seo";
 import Image from "../components/Image";
 import {
@@ -92,8 +92,8 @@ const Gallery = (props) => {
               cols={tile.cols || 1}
             >
               <Image
-                path={`content/gallery/${tile.src}`}
-                //previewSrc={require(`content/gallery/${tile.src}?lqip`)}
+                traceSrc={require(`content/gallery/${tile.src}?trace`)}
+                webpSrc={require(`content/gallery/${tile.src}?webp`)}
                 alt={tile.title}
                 className={classes.gridListImage}
               />

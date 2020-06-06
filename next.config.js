@@ -30,32 +30,41 @@ module.exports = withPlugins([optimizedImages], {
       })
     );
 
-    /*config.module.rules.push({
-        test: /\.(pdf|md|ico)$/,
-        loaders: [
-          {
-            loader: "file-loader",
-            options: {},
-          },
-        ],
-      });
-      
     config.module.rules.push({
-      test: /\.(png|jpe?g)$/,
+      test: /\.(pdf|md|ico)$/,
       loaders: [
         {
-          loader: "webp-loader",
+          loader: "file-loader",
+          options: {},
+        },
+      ],
+    });
+
+    /* config.module.rules.push({
+      test: /\.(png|jpe?g)$/,
+      use: [
+        {
+          loader: "image-trace-loader",
           options: {
-            fallback: "file-laoder",
+            // publicPath: "/_next/",
+            // outputPath: "static/",
+          },
+        },
+        {
+          loader: "webp-loader",
+        },
+        {
+          loader: "url-loader",
+          options: {
             name: "[name].[ext]",
-            base64: true,
-            palette: true,
-            publicPath: "/_next/static/images",
-            outputPath: "static/images",
+            //base64: true,
+            //palette: true,
+            //publicPath: "/_next/",
+            //outputPath: "static/",
           },
         },
       ],
-    });*/
+    }); */
 
     return config;
     //return smp.wrap(config);

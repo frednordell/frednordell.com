@@ -1,46 +1,88 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
+import { CSSProperties } from "@material-ui/core/styles/withStyles";
 
 type ImageProps = {
   alt: string;
-  path: string;
+  traceSrc: any;
+  webpSrc: any;
   className: string;
 };
+
 const Image: React.FunctionComponent<ImageProps> = ({
   alt,
-  path,
+  traceSrc,
+  webpSrc,
   className,
 }) => {
+  const imgRef = useRef<HTMLImageElement>(null);
+  const [styles, setStyles] = useState({
+    styles: {
+      trace: {
+        visibility: "visible",
+        position: "",
+        right: "",
+        left: "",
+        top: "",
+        bottom: "",
+      },
+      webp: {
+        visibility: "hidden",
+        position: "fixed",
+        right: "0",
+        left: "0",
+        top: "0",
+        bottom: "0",
+      },
+    } as CSSProperties,
+  });
+
+  function onLoad() {
+    setStyles({
+      styles: {
+        trace: {
+          visibility: "hidden",
+          position: "fixed",
+          right: "0",
+          left: "0",
+          top: "0",
+          bottom: "0",
+        },
+        webp: {
+          visibility: "visible",
+          position: "",
+          right: "",
+          left: "",
+          top: "",
+          bottom: "",
+        },
+      },
+    });
+  }
+
+  useEffect(() => {
+    if (imgRef.current?.complete) {
+      onLoad();
+    }
+  }, []);
+
   return (
-    <div className="image-container">
+    <div>
       <img
+        id={"trace-" + alt}
+        style={styles.styles.trace}
         alt={alt}
         className={className}
-        src={require(`${path}?trace`).trace}
+        src={traceSrc.trace}
       />
-      <img alt={alt} className={className} src={require(`${path}?webp`)} />
-      <style jsx>{`
-        .image-container: {
-          position: relative:
-        }
-        img {
-          position: absolute;
-          top: 0;
-          left: 0;
-        }
-    `}</style>
+      <img
+        ref={imgRef}
+        style={styles.styles.webp}
+        onLoad={onLoad}
+        alt={alt}
+        className={className}
+        src={webpSrc}
+      />
     </div>
   );
 };
 export default Image;
-/* 
-export default function Image({ alt, src, className }) {
-  return (
-    <img
-      className={`${className}`}
-      alt={alt}
-      src={require(src).trace}
-      data-srcset={src}
-    />
-  );
-}
- */

@@ -13,8 +13,8 @@ const MarkdownImage = ({ alt, src }) => {
   return (
     <Image
       alt={alt}
-      path={`content/blog/assets/${src}`}
-      //previewSrc={require(`content/blog/assets/${src}?trace`).trace}
+      traceSrc={require(`content/blog/assets/${src}?trace`)}
+      webpSrc={require(`content/blog/assets/${src}?webp`)}
       className="markdown-image"
     />
   );

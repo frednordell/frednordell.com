@@ -21,8 +21,8 @@ class Intro extends Component<Props, State> {
       >
         <Grid item xs={10} md={3}>
           <Image
-            path={`content/${this.src}`}
-            //previewSrc={require(`content/${this.src}?trace`).trace}
+            traceSrc={require(`content/${this.src}?trace`)}
+            webpSrc={require(`content/${this.src}?webp`)}
             alt="Image of Fred"
             className="intro-image"
           />
