@@ -1,4 +1,4 @@
-# Personal-webpage [![Build Status](https://api.travis-ci.org/frednordell/fred.nordells.nu.svg?branch=master)](https://travis-ci.org/frednordell/fred.nordells.nu)
+# Personal-webpage
 
 This is the repository for my personal web page that serves as a hobby project.
 
