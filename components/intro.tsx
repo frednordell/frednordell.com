@@ -36,7 +36,7 @@ class Intro extends Component<Props, State> {
           <Typography align="center" variant="body1">
             Studying{" "}
             <a
-              href="http://www.lth.se/english/education/programmes/master-engineering/computer-science-engineering/"
+              href="http://www.lth.se/utbildning/datateknik300/"
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -19,6 +19,7 @@ export default function SEO({ title, description = "" }) {
         property="og:description"
         content={metaDescription}
       ></meta>
+      <meta name="og:url" content={siteMetaData.siteUrl}></meta>
       <link rel="manifest" href="/manifest.json" />
       <link rel="shortcut icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" href="/favicon.ico"></link>

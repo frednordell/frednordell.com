@@ -6,7 +6,7 @@ export default {
       summary: "",
     },
     description: "Personal webpage and blog.",
-    siteUrl: "https://fred.nordells.nu",
+    siteUrl: "https://frednordell.com",
     language: "en",
     social: {
       twitter: "FredNordell",
