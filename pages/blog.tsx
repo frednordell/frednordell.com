@@ -8,7 +8,7 @@ import { Grid, Container } from "@material-ui/core";
 export default function Blog({ posts }) {
   return (
     <Layout>
-      <SEO title="Blog"></SEO>
+      <SEO title="Blog" path="/blog"></SEO>
       <Container maxWidth="md">
         <Grid container spacing={3} justify="space-evenly">
           {posts.map(

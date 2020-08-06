@@ -9,6 +9,7 @@ export default function Post({ post, frontmatter }) {
     <Layout>
       <SEO
         title={frontmatter.title}
+        path={"/post/" + frontmatter.slug}
         description={frontmatter.description || post.excerpt}
       />
 
@@ -44,5 +45,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params: { slug } }) {
   const postData = getPostBySlug(slug);
 
-  return { props: postData };
+  return {
+    props: postData,
+  };
 }

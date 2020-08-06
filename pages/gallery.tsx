@@ -82,7 +82,7 @@ const Gallery = (props) => {
  */
   return (
     <Layout>
-      <SEO title="Gallery"></SEO>
+      <SEO title="Gallery" path="/gallery"></SEO>
       <div className={classes.root}>
         <GridList className={classes.gridList} cols={getGridListCols()}>
           {tileData.map((tile) => (

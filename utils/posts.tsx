@@ -65,6 +65,7 @@ export function getPostBySlug(slug) {
 
   const frontmatter = {
     ...data,
+    slug,
     postedAt: getFormattedDate(data.postedAt),
   };
 
