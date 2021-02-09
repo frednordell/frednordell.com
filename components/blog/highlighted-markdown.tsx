@@ -21,10 +21,13 @@ const MarkdownImage = ({ alt, src }) => {
 };
 
 const MarkdownImageContainer = (props) => (
-  <Box marginY={2}>
-    <Grid container direction="row" justify="center" alignItems="center">
+  <Box marginY={2} id={props.alt.split("#")[1] || props.alt}>
+    <Grid container direction="column" justify="center" alignItems="center">
       <Grid item>
         <MarkdownImage {...props}></MarkdownImage>
+      </Grid>
+      <Grid item>
+        <em>{props.alt.split("#")[0]}</em>
       </Grid>
     </Grid>
   </Box>
@@ -60,7 +63,17 @@ const options = {
         return <Typography component="div" align="left" paragraph {...props} />;
       },
     },
-    a: { component: Link },
+    a: { component: (props) => {
+      if (props.href.startsWith("http")) {
+        return (
+          <a href={props.href} rel="noopener noreferrer" target="_blank">
+            {props.href}
+          </a>
+        )
+      } else { 
+        return <Link {...props}/>
+      }
+    }},
     li: {
       component: (props) => {
         return (
