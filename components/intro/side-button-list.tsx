@@ -115,7 +115,7 @@ class SideButtonList extends Component<Props, State> {
               button
               className="side-button-list-nested"
               component="a"
-              href="https://github.com/frednordell/fred.nordells.nu"
+              href="https://github.com/frednordell/frednordell.com"
               target="_blank"
             >
               <ListItemIcon>
