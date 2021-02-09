@@ -121,7 +121,7 @@ class SideButtonList extends Component<Props, State> {
               <ListItemIcon>
                 <Icon>link</Icon>
               </ListItemIcon>
-              <ListItemText primary="fred.nordells.nu" />
+              <ListItemText primary="frednordell.com" />
             </ListItem>
             {/* <ListItem
               button
