@@ -25,6 +25,10 @@ export default function App(props) {
   return (
     <React.Fragment>
       <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
         <title>Fred Nordell</title>
       </Head>
       <MuiThemeProvider theme={theme}>
