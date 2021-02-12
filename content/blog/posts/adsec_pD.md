@@ -19,7 +19,7 @@ window opens and the File manager program exits.
 
 ## Assignment 2
 
-In figure [1](#fig:stack_ill) the stack is illustrated.
+In figure [1](/post/adsec_pD/#fig:stack_ill) the stack is illustrated.
 
 ### Gadget 1: `call_edx=pack(’<L’,0x1001D8C8)`
 
@@ -175,9 +175,9 @@ execute from it.
 
 There are at least 2 ways that we could find to circumvent the DEP
 protection. The first exploit uses the inbuilt function
-`SetProcessDEPPolicy` that overrides the system set DEP policy<sup>[1](#c1)</sup>. The
+`SetProcessDEPPolicy` that overrides the system set DEP policy<sup>[1](/post/adsec_pD/#c1)</sup>. The
 exploit is targeted at Freefloat FTP Server 1.0 and does a DEP Bypass
-with ROP<sup>[2](#c2)</sup>. The other exploit we found is targeted at Steinberg
+with ROP<sup>[2](/post/adsec_pD/#c2)</sup>. The other exploit we found is targeted at Steinberg
 MyMp3PRO 5.0 and uses a Buffer Overflow (SEH) with a DEP Bypass and ROP.
 The exploit is local and as such creates a file that the program then
 loads, because the program loads the MP3 files and then executes them
