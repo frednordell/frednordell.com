@@ -1,13 +1,11 @@
 // next Js config
-const withPlugins = require("next-compose-plugins");
-const optimizedImages = require("next-optimized-images");
 const path = require("path");
 const fs = require("fs");
 const WebpackBar = require("webpackbar");
 const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
 const smp = new SpeedMeasurePlugin();
 
-module.exports = withPlugins([optimizedImages], {
+module.exports = {
   webpack(config) {
     //Absolute imports paths
     const ROOT_DIR = process.cwd();
@@ -30,43 +28,7 @@ module.exports = withPlugins([optimizedImages], {
       })
     );
 
-    config.module.rules.push({
-      test: /\.(pdf|md|ico)$/,
-      loaders: [
-        {
-          loader: "file-loader",
-          options: {},
-        },
-      ],
-    });
-
-    /* config.module.rules.push({
-      test: /\.(png|jpe?g)$/,
-      use: [
-        {
-          loader: "image-trace-loader",
-          options: {
-            // publicPath: "/_next/",
-            // outputPath: "static/",
-          },
-        },
-        {
-          loader: "webp-loader",
-        },
-        {
-          loader: "url-loader",
-          options: {
-            name: "[name].[ext]",
-            //base64: true,
-            //palette: true,
-            //publicPath: "/_next/",
-            //outputPath: "static/",
-          },
-        },
-      ],
-    }); */
-
     return config;
     //return smp.wrap(config);
   },
-});
+};

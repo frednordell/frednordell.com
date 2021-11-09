@@ -23,4 +23,5 @@ a {
 .intro-image {
   max-width: 100%;
   border-radius: 20%;
+  min-height: 50vh;
 }

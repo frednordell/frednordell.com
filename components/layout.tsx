@@ -1,6 +1,6 @@
 //components
 import TopBar from "../components/topbar";
-import Copyright from "../src/Copyright";
+import Copyright from "./Copyright";
 import { Grid } from "@material-ui/core";
 
 export default function Layout({ children }) {

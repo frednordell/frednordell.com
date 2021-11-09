@@ -1,6 +1,6 @@
 import Layout from "components/layout";
 import SEO from "../components/Seo";
-import Image from "../components/Image";
+import Image from "next/image";
 import {
   makeStyles,
   createStyles,
@@ -53,33 +53,7 @@ const Gallery = (props) => {
 
     return 2;
   };
-  //console.log(props.pictures);
   const tileData = JSON.parse(props.pictures);
-  /* const tileData = Array(20);
-  tileData.fill(
-    {
-      src: "horizontal.jpg",
-      title: "Test Picture",
-      author: "Fred Nordell",
-      cols: 2,
-      rand: Math.random,
-    },
-    0,
-    9
-  );
-
-  tileData.fill(
-    {
-      src: "vertical.jpg",
-      title: "Test Picture",
-      author: "Fred Nordell",
-      cols: 1,
-      rand: Math.random,
-    },
-    10,
-    20
-  );
- */
   return (
     <Layout>
       <SEO title="Gallery" path="/gallery"></SEO>
@@ -92,8 +66,7 @@ const Gallery = (props) => {
               cols={tile.cols || 1}
             >
               <Image
-                traceSrc={require(`content/gallery/${tile.src}?trace`)}
-                webpSrc={require(`content/gallery/${tile.src}?webp`)}
+                src={require(`content/gallery/${tile.src}`)}
                 alt={tile.title}
                 className={classes.gridListImage}
               />
