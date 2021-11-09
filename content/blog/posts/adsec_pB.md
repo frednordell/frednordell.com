@@ -44,7 +44,7 @@ because the public key was never used to protect anything.
 
 UDP is used to transport the data between actors. The Ephemeral
 Diffie-Hellman key exchange is used to be able to securely derive a
-common secret. We then used HKDF [1](#c1) to derive keys from the shared
+common secret. We then used HKDF <sup>[1](/post/adsec_pB/#c1)</sup> to derive keys from the shared
 secret. We chose Diffie-Hellman as it allowed us to use a symmetric key
 encryption which does not require large key sizes which is favourable in
 IOT-devices with constrained computing and battery. Moreover, the
@@ -70,7 +70,7 @@ a semicolon is used to separate the data as follows:
 "ip:127.0.0.1,port:8080,id:asdf;DATA". The total package size is max 64
 bytes.
 
-The sequence diagram in figure [1](#fig:seq_diag) describes the handshake and data transfer
+The sequence diagram in figure [1](/post/adsec_pB/#fig:seq_diag) describes the handshake and data transfer
 process.
 
 ![Sequence Diagram#fig:seq_diag](Sequence.png)
@@ -89,9 +89,9 @@ An improvement to be made here can be to use the elliptic curve version
 as it is not as computationally intensive which would benefit the
 constrained IOT-devices.
 
-In figure [2](#fig:client),
-[3](#fig:proxy) and
-[4](#fig:server) printouts
+In figure [2](/post/adsec_pB/#fig:client),
+[3](/post/adsec_pB/#fig:proxy) and
+[4](/post/adsec_pB/#fig:server) printouts
 for the client, server and proxy are listed. One can see the message in
 both the client and server as well as the individual packages printed by
 the proxy.

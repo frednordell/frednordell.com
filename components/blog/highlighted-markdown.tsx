@@ -2,7 +2,7 @@ import Link from "../../src/Link";
 import { useEffect, useRef, Fragment } from "react";
 import Markdown from "markdown-to-jsx";
 import hljs from "highlight.js";
-import Image from "../Image";
+import Image from "next/image";
 import { Typography, withStyles, Box, Grid } from "@material-ui/core";
 
 interface HighlightedMarkdownProps {
@@ -13,8 +13,8 @@ const MarkdownImage = ({ alt, src }) => {
   return (
     <Image
       alt={alt}
-      traceSrc={require(`content/blog/assets/${src}?trace`)}
-      webpSrc={require(`content/blog/assets/${src}?webp`)}
+      src={require(`content/blog/assets/${src}?trace`)}
+      layout="intrinsic"
       className="markdown-image"
     />
   );
@@ -67,7 +67,7 @@ const options = {
       if (props.href.startsWith("http")) {
         return (
           <a href={props.href} rel="noopener noreferrer" target="_blank">
-            {props.href}
+            {props.children[0]}
           </a>
         )
       } else { 
@@ -92,7 +92,9 @@ export default function HighlightedMarkdown({
   const rootRef = useRef<HTMLDivElement>();
   useEffect(() => {
     rootRef.current.querySelectorAll("pre code").forEach((block) => {
-      hljs.highlightBlock(block);
+      if  (block instanceof HTMLElement) {
+        hljs.highlightElement(block)
+      } 
     });
   }, [children]);
   return (
