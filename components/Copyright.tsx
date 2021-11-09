@@ -35,6 +35,7 @@ class Copyright extends Component<Props, State> {
         <a
           rel="noreferrer noopener license"
           target="_blank"
+          aria-label="Link to creative commons licence on image"
           href="http://creativecommons.org/licenses/by-nc-nd/4.0/"
         />
         <Image
