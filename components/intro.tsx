@@ -4,7 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import Icon from "@material-ui/core/Icon";
 import Image from "next/image";
-import imageSrc from "images/face2.png";
+import imageSrc from "images/face2.jpg";
 
 type Props = {};
 type State = {};
